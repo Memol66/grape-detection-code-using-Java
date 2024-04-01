@@ -1,0 +1,30 @@
+import javax.imageio.ImageIO;
+import java.awt.image.BufferedImage;
+import java.io.File;
+import java.io.IOException;
+
+public class GrapeDetection {
+    public static void main(String[] args) {
+        try {
+            // Read the image
+            BufferedImage img = ImageIO.read(new File("grape.jpg"));
+
+            // Convert the image to grayscale if necessary
+            int width = img.getWidth();
+            int height = img.getHeight();
+            BufferedImage grayscaleImg = new BufferedImage(width, height, BufferedImage.TYPE_BYTE_GRAY);
+            grayscaleImg.getGraphics().drawImage(img, 0, 0, null);
+
+            // Convert the image to the frequency domain - this part needs to be implemented using libraries like OpenCV
+
+            // Apply grape detection algorithm - this part needs to be implemented based on your specific algorithm
+
+            // Convert the image back to the spatial domain - this part needs to be implemented based on your specific algorithm
+
+            // Display or save the final image - this part needs to be implemented based on your specific requirement
+
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+}
